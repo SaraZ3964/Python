@@ -4,7 +4,7 @@ file = "election_data.csv"
 data_df = pd.read_csv(file)
 data_df.head()
 
-Total = int(data_df.index.size)
+Total = data_df["Voter ID"].count()
 print("Election Results")
 print("-----------------------------------")
 print("Total Votes : ", str(Total))
