@@ -1,0 +1,17 @@
+import pandas as pd
+
+file = "budget_data.csv"
+data_df = pd.read_csv(file)
+data_df.head()
+
+Months = data_df["Date"].count()
+Sum = data_df["Profit/Losses"].sum()
+Ave = data_df["Profit/Losses"].mean()
+Max = data_df["Profit/Losses"].max()
+Min = data_df["Profit/Losses"].min()
+
+print("Months:" + str(Months))
+print("Total: " + str(Sum))
+print("Average: "+ str(Ave))
+print("Maximum: " + str(Max))
+print("Minmium:" + str(Min))
